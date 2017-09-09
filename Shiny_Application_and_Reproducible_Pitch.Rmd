@@ -1,0 +1,63 @@
+---
+title: "Shiny Application and Reproducible Pitch"
+author: "Han Zhang"
+date: "September 8, 2017"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Instructions
+
+This peer assessed assignment has two parts. 
+
+First, you will create a Shiny application and deploy it on Rstudio's servers. 
+
+Second, you will use Slidify or Rstudio Presenter to prepare a reproducible pitch presentation about your application.
+
+
+
+## About BMI Calculation
+
+```{r, echo = TRUE}
+Height = 1.8 #unit: m
+Weight = 70 #unit: kg
+
+BMI <- Weight/(Height * Height)
+
+BMI
+```
+
+```{r, echo = TRUE}
+Height = 70 #unit: inch
+Weight = 154 #unit: lb
+
+BMI <- Weight/(Height * Height) * 703
+
+BMI
+```
+
+## Shiny Application
+
+radioButtons: select input unit (kg & m / lb & in)
+
+numericInput: Value of Weight
+
+numericInput: Value of Height
+
+BMI value is calculated on server side
+
+Display the calculated BMI 
+
+Display Diagnostic
+
+
+
+## Project Links
+
+The shiny application developed for this assignment is available at: https://xiaohan98.shinyapps.io/Shiny_Application_and_Reproducible_Pitch/
+
+The source codes of ui.R and server.R available on GitHub repo at: https://github.com/xiaohan98/Shiny_Application
+
